@@ -16,7 +16,7 @@ export const onUnload = before("uploadLocalFiles", uploadModule, (args) => {
         const extIdx = i.filename.lastIndexOf(".");
         const ext = extIdx !== -1 ? i.filename.slice(extIdx) : "";
 
-        const name = `${Math.floor(Date.now() / 1000)}${Math.floor(window.performance.now())}`;
+        const name = Date.now()
 
         // why are there two. why???
         // and yes, i checked, setting both is required...
