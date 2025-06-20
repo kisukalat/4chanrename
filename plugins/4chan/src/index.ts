@@ -2,9 +2,9 @@ import { findByProps } from "@vendetta/metro";
 import { before } from "@vendetta/patcher";
 import { storage } from "@vendetta/plugin";
 
-const uploadModule = findByProps("uploadFiles");
+const uploadModule = findByProps("uploadItems");
 
-export const onUnload = before("uploadFiles", uploadModule, (args) => { 
+export const onUnload = before("uploadItems", uploadModule, (args) => { 
     const { items } = args[0];
     if (!items) return;
 
